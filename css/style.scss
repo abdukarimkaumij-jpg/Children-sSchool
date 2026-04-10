@@ -50,7 +50,10 @@ body {
       padding: 0 20px;
 }
 .section {
-      margin: 200px 0;
+      margin: clamp(80px, 8vw ,200px) 0;
+}
+.section-top {
+      margin-top: clamp(80px, 8vw ,200px);
 }
 .info {
       max-width: 990px;
@@ -827,9 +830,152 @@ body {
 		}
 }
 // Academics Page
+.features {
+		&__content-wrap {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  gap: 50px 0;
+		}
+		&__wrao-flex {
+                  position: relative;
+                  flex: 0 1 31%;
+                  border: 2px solid $grey-15;
+                  border-radius: 12px;
+                  padding: clamp(50px, 5vw, 80px) clamp(40px, 4vw, 50px) clamp(30px, 3vw, 50px) clamp(30px, 3vw, 50px);
+                  box-shadow: 6px 6px 0 2px #1e1e1e;
+                  background: $absolute-white;
+		}
+		&__flex-logo {
+                  position: absolute;
+                  top: -35px;
+                  left: 30px;
+		}
+		&__flex-name {
+                  margin-bottom: 20px;
+                  font-family: $second-family;
+                  font-weight: 700;
+                  font-size: clamp(22px, 2vw ,28px);
+                  line-height: 130%;
+                  color: $grey-10;
+		}
+}
+.learn {
+		&__content-wrap {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  gap: 50px 0;
+		}
+		&__wrap-flex {
+                  width: 31%;
+                  border: 2px solid $grey-15;
+                  border-radius: 12px;
+                  padding: clamp(30px, 4vw, 50px);
+                  text-align: center;
+                  box-shadow: 6px 6px 0 2px #1e1e1e;
+                  background-color: $absolute-white;
+                  background-image: url(../images/learn-bg.png);
+                  background-repeat: no-repeat;
+                  background-position: top center;
+		}
+		&__flex-bg {
+                  width: 100%;
+                  height: 304px;
+                  overflow: hidden;
+                  img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                  }
+		}
+		&__flex-name {
+                  margin: 40px 0 14px;
+                  font-family: $second-family;
+                  font-weight: 700;
+                  font-size: clamp(22px, 3vw, 28px);
+                  line-height: 130%;
+                  text-align: center;
+                  color: $grey-10;
+		}
+}
+.gallery {
+		&__content-sartyrofka {
+		}
+		&__sartyrofka-button {
+                  width: 61%;
+                  margin: 0 auto 300px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  gap: 15px 0;
+		}
+		&__button-btn {
+                  border: 2px solid $grey-20;
+                  border-radius: 8px;
+                  padding: 14px 20px;
+                  background: $absolute-white;
+                  font-family: $font-family;
+                  font-weight: 600;
+                  font-size: 20px;
+                  line-height: 130%;
+                  color: $grey-10;
+		}
+		&__sartyrofka-body {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  flex-direction: column;
+                  gap: 300px 0;
+		}
+		&__body-flex {
+                  position: relative;
+		}
+		&__flex-bg {
+                  position: absolute;
+                  max-width: 90%;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  top: -145px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  gap: 40px;
+		}
+		&__bg-img {
+                  width: 344px;
+                  height: 304px;
+                  img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                  }
+		}
+		&__flex-text {
+                  border: 2px solid $grey-15;
+                  border-radius: 12px;
+                  padding: 200px 50px 50px;
+                  box-shadow: 6px 6px 0 2px #1e1e1e;
+                  background: $absolute-white;
+		}
+		&__text-name {
+                  font-family: $second-family;
+                  font-weight: 700;
+                  font-size: clamp(28px, 3vw ,40px);
+                  line-height: 130%;
+                  color: $grey-10;
+		}
+		&__text-text {
+		}
+}
 @media (max-width: 1440px) {
-      .section {
-            margin: 150px 0;
+      .learn {
+            &__wrap-flex {
+                  width: 30%;
+            }
       }
 }
 @media (max-width: 1140px) {
@@ -893,6 +1039,19 @@ body {
             // }
 		}
     }
+    .learn {
+            &__wrap-flex {
+                  width: 47%;
+            }
+      } 
+      .gallery {
+            &__sartyrofka-button {
+                  margin-bottom: 150px;
+            }
+            &__sartyrofka-body {
+                  gap: 150px;
+            }
+      }
 }
 @media (max-width: 955px) {
       .hero {
@@ -986,6 +1145,17 @@ body {
                   flex: 0 1 100%;
 		}
       }
+      // Academics Page
+      .features {
+            &__wrao-flex {
+                  flex: 0 1 100%;
+            }
+      }
+      .learn {
+            &__wrap-flex {
+                  width: 100%;
+            }
+      }  
 }
 @media (max-width: 825px) {
       .subtitle {
@@ -993,9 +1163,6 @@ body {
       }
 }
 @media (max-width: 768px) {
-      .section { 
-            margin: 80px 0;  
-      }
       .advantages {
             &__wrap-flex {
                   flex: 0 1 100%;
