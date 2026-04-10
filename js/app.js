@@ -1,7 +1,7 @@
 // === Подключение HTML (header, footer и т.д.) ===
 async function includeHTML() {
   const elements = document.querySelectorAll('[data-include]');
-  
+
   const promises = Array.from(elements).map(async (el) => {
     const file = el.getAttribute('data-include');
 
@@ -21,8 +21,9 @@ async function includeHTML() {
     }
   });
 
-  return Promise.all(promises);
+  await Promise.all(promises);
 }
+
 
 // === Бургер ===
 function initBurger() {
@@ -44,6 +45,7 @@ function initBurger() {
   });
 }
 
+
 // === Скролл ===
 function initScroll() {
   const banner = document.querySelector(".header__content-banner");
@@ -52,7 +54,7 @@ function initScroll() {
   if (!banner || !navbar) return;
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > banner.offsetHeight) {
       banner.classList.add("scrolled");
       navbar.classList.add("scrolled");
     } else {
@@ -62,36 +64,45 @@ function initScroll() {
   });
 }
 
+
 // === Swiper ===
 function initSwiper() {
-  if (!document.querySelector(".mySwiper")) return;
 
-  new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 50,
-    freeMode: true,
+  // Первый слайдер
+  if (document.querySelector(".mySwiper")) {
+    new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 50,
+      freeMode: true,
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      768: {
-        slidesPerView: 1,
-        spaceBetween: 30,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 50,
+
+      breakpoints: {
+        0: { slidesPerView: 1, spaceBetween: 10 },
+        768: { slidesPerView: 1, spaceBetween: 30 },
+        1024: { slidesPerView: 3, spaceBetween: 50 }
       }
-    }
-  });
+    });
+  }
+
+  // Второй слайдер
+  if (document.querySelector(".achievements-mySwiper")) {
+    new Swiper(".achievements-mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      freeMode: true,
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  }
 }
+
 
 // === FAQ ===
 function initQuestions() {
@@ -100,7 +111,7 @@ function initQuestions() {
 
   items.forEach(item => {
     item.addEventListener('click', () => {
-      const body = item.querySelector('.question__flex-bode');
+      const body = item.querySelector('.question__flex-body');
       const top = item.querySelector('.question__flex-top');
 
       item.classList.toggle('active');
@@ -110,11 +121,16 @@ function initQuestions() {
   });
 }
 
+
 // === Запуск ===
 document.addEventListener("DOMContentLoaded", async () => {
-  await includeHTML();   // сначала грузим header/footer
-  initBurger();
-  initScroll();          // ← ТЕПЕРЬ работает правильно
-  initSwiper();
-  initQuestions();
+  await includeHTML();
+
+  // даём браузеру применить вставленный HTML
+  requestAnimationFrame(() => {
+    initBurger();
+    initScroll();
+    initSwiper();
+    initQuestions();
+  });
 });
