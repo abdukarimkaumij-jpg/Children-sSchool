@@ -44,6 +44,7 @@ body {
       background: $orange-97;
 }
 .container {
+      position: relative;
       max-width: 1640px;
       margin: 0 auto;
       padding: 0 20px;
@@ -90,8 +91,8 @@ body {
     margin: 18px 0 80px;
 		&__content {
                   max-width: 1860px;
+                  padding: 0 20px;
                   overflow: hidden;
-                  position: relative;
 		}
 		&__content-banner {
                   margin-bottom: 15px;
@@ -131,6 +132,7 @@ body {
                         transform: translateX(-50%);
                         width: 100%;
                         max-width: 1860px;
+                        margin: 0 auto;
                         z-index: 99;
                   }
 		}
@@ -639,7 +641,35 @@ body {
 		&__info-right {
                   width: 47%;
 		}
-		&__right-text {
+}
+.visions {
+		&__content-wrap {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  gap: 30px 0;
+		}
+		&__wrap-flex {
+                  flex: 0 1 47%;
+                  border: 2px solid $grey-15;
+                  border-radius: 12px;
+                  padding: clamp(40px, 4vw, 60px);
+                  box-shadow: 6px 6px 0 2px #1e1e1e;
+                  background: $absolute-white;
+		}
+		&__flex-header {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-bottom: 60px;
+		}
+		&__header-name {
+                  font-family: $second-family;
+                  font-weight: 700;
+                  font-size: clamp(30px, 3vw, 48px);
+                  line-height: 130%;
+                  color: $grey-10;
 		}
 }
 @media (max-width: 1440px) {
@@ -650,7 +680,6 @@ body {
 @media (max-width: 1140px) {
     .header {
       width: 100%;
-      right: 0;
         &__novbar-menu {
             width: 100%;
             display: none;
@@ -763,6 +792,23 @@ body {
             }
             &__top-menu {
                   flex-direction: column;
+            }
+      }
+      // about page 
+      .banner {
+            &__content-info {
+                  flex-direction: column;
+                  gap: 20px;
+            }
+            &__info-left,
+            &__info-right {
+                  text-align: center;
+                  width: 100%;
+            }
+      }
+      .visions {
+            &__wrap-flex  {
+                  flex: 0 1 100%;
             }
       }
 }
