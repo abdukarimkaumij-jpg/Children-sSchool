@@ -914,13 +914,14 @@ body {
                   gap: 15px 0;
 		}
 		&__button-btn {
+                  width: 30%;
                   border: 2px solid $grey-20;
                   border-radius: 8px;
                   padding: 14px 20px;
                   background: $absolute-white;
                   font-family: $font-family;
                   font-weight: 600;
-                  font-size: 20px;
+                  font-size: clamp(16px, 1vw ,20px);
                   line-height: 130%;
                   color: $grey-10;
 		}
@@ -1156,10 +1157,20 @@ body {
                   width: 100%;
             }
       }  
+      .gallery {
+            &__button-btn {
+                  width: 47%;
+            }
+      }
 }
 @media (max-width: 825px) {
       .subtitle {
             max-width: 100%;
+      }
+      .gallery {
+            &__button-btn {
+                  width: 100%;
+            }
       }
 }
 @media (max-width: 768px) {

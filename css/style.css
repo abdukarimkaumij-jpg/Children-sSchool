@@ -937,13 +937,14 @@ body {
   gap: 15px 0;
 }
 .gallery__button-btn {
+  width: 30%;
   border: 2px solid #333;
   border-radius: 8px;
   padding: 14px 20px;
   background: #fff;
   font-family: "Outfit", sans-serif;
   font-weight: 600;
-  font-size: 20px;
+  font-size: clamp(16px, 1vw, 20px);
   line-height: 130%;
   color: #1a1a1a;
 }
@@ -1129,10 +1130,16 @@ body {
   .learn__wrap-flex {
     width: 100%;
   }
+  .gallery__button-btn {
+    width: 47%;
+  }
 }
 @media (max-width: 825px) {
   .subtitle {
     max-width: 100%;
+  }
+  .gallery__button-btn {
+    width: 100%;
   }
 }
 @media (max-width: 768px) {
