@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
 </head>
 <body>
@@ -137,28 +138,251 @@
             </div>
             <div class="gallery__content-sartyrofka">
                 <div class="gallery__sartyrofka-button">
-                    <button class="gallery__button-btn">All</button>
-                    <button class="gallery__button-btn">Classrooms</button>
-                    <button class="gallery__button-btn">Library</button>
-                    <button class="gallery__button-btn">Science Lab</button>
-                    <button class="gallery__button-btn">Computer Lab</button>
-                    <button class="gallery__button-btn">Garden and Nature Area</button>
+                    <button class="gallery__button-btn" data-filter="all">All</button>
+                    <button class="gallery__button-btn" data-filter="classrooms">Classrooms</button>
+                    <button class="gallery__button-btn" data-filter="library">Library</button>
+                    <button class="gallery__button-btn" data-filter="science">Science Lab</button>
+                    <button class="gallery__button-btn" data-filter="computer">Computer Lab</button>
+                    <button class="gallery__button-btn" data-filter="garden">Garden</button>
                 </div>
-                <div class="gallery__sartyrofka-body">
+                <div class="gallery__sartyrofka-body" data-category="classrooms">
                     <div class="gallery__body-flex">
                         <div class="gallery__flex-bg">
-                            <div class="gallery__bg-img">
-                                <img src="images/gallery-1.png" alt="gallery-1">
+                            <div class="swiper galleryMySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-1.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-1.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-1.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-1.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-1.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
-                            <div class="gallery__bg-img">
-                                <img src="images/gallery-1.png" alt="gallery-1">
+                            <div class="swiper-btn">
+                                <div class="swiper-button-next">
+                                    <img src="images/next.png" alt="">
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <img src="images/prev.png" alt="">
+                                </div>
                             </div>
-                            <div class="gallery__bg-img">
-                                <img src="images/gallery-1.png" alt="gallery-1">
+                            
+                        </div>
+                        <div class="gallery__flex-text">
+                            <h5 class="gallery__text-name">Classrooms</h5>
+                            <p class="gallery__text-text text">Our well-equipped classrooms are designed to provide a nurturing and stimulating learning environment. Each classroom is thoughtfully arranged to inspire creativity, curiosity, and engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__sartyrofka-body"  data-category="library">
+                    <div class="gallery__body-flex">
+                        <div class="gallery__flex-bg">
+                            <div class="swiper galleryMySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-2.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-2.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-2.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-2.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-2.png" alt="gallery-1">
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
-                            <div class="gallery__bg-img">
-                                <img src="images/gallery-1.png" alt="gallery-1">
+                            <div class="swiper-btn">
+                                <div class="swiper-button-next">
+                                    <img src="images/next.png" alt="">
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <img src="images/prev.png" alt="">
+                                </div>
                             </div>
+                            
+                        </div>
+                        <div class="gallery__flex-text">
+                            <h5 class="gallery__text-name">Classrooms</h5>
+                            <p class="gallery__text-text text">Our well-equipped classrooms are designed to provide a nurturing and stimulating learning environment. Each classroom is thoughtfully arranged to inspire creativity, curiosity, and engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__sartyrofka-body"  data-category="science">
+                    <div class="gallery__body-flex">
+                        <div class="gallery__flex-bg">
+                            <div class="swiper galleryMySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-3.png" alt="gallery-3">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-3.png" alt="gallery-3">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-3.png" alt="gallery-3">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-3.png" alt="gallery-3">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-3.png" alt="gallery-3">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-btn">
+                                <div class="swiper-button-next">
+                                    <img src="images/next.png" alt="">
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <img src="images/prev.png" alt="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="gallery__flex-text">
+                            <h5 class="gallery__text-name">Classrooms</h5>
+                            <p class="gallery__text-text text">Our well-equipped classrooms are designed to provide a nurturing and stimulating learning environment. Each classroom is thoughtfully arranged to inspire creativity, curiosity, and engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__sartyrofka-body" data-category="computer">
+                    <div class="gallery__body-flex">
+                        <div class="gallery__flex-bg">
+                            <div class="swiper galleryMySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-4.png" alt="gallery-4">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-4.png" alt="gallery-4">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-4.png" alt="gallery-4">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-4.png" alt="gallery-4">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-4.png" alt="gallery-4">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-btn">
+                                <div class="swiper-button-next">
+                                    <img src="images/next.png" alt="">
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <img src="images/prev.png" alt="">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="gallery__flex-text">
+                            <h5 class="gallery__text-name">Classrooms</h5>
+                            <p class="gallery__text-text text">Our well-equipped classrooms are designed to provide a nurturing and stimulating learning environment. Each classroom is thoughtfully arranged to inspire creativity, curiosity, and engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery__sartyrofka-body"  data-category="garden">
+                    <div class="gallery__body-flex">
+                        <div class="gallery__flex-bg">
+                            <div class="swiper galleryMySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-5.png" alt="gallery-5">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-5.png" alt="gallery-5">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-5.png" alt="gallery-5">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-5.png" alt="gallery-5">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="gallery__bg-img">
+                                            <img src="images/gallery-5.png" alt="gallery-5">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="swiper-btn">
+                                <div class="swiper-button-next">
+                                    <img src="images/next.png" alt="">
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <img src="images/prev.png" alt="">
+                                </div>
+                            </div>
+                            
                         </div>
                         <div class="gallery__flex-text">
                             <h5 class="gallery__text-name">Classrooms</h5>
@@ -170,6 +394,7 @@
         </div>
     </section>
     <div data-include="includes/footer.html" class="footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

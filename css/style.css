@@ -950,6 +950,7 @@ body {
 }
 .gallery__sartyrofka-body {
   display: flex;
+  margin-top: 300px;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
@@ -961,17 +962,18 @@ body {
 .gallery__flex-bg {
   position: absolute;
   max-width: 90%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 50px;
   top: -145px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+}
+.gallery .swiper {
+  width: 100%;
+}
+.gallery .swiper-slide {
+  height: auto;
 }
 .gallery__bg-img {
-  width: 344px;
-  height: 304px;
+  width: 100%;
+  height: 300px;
 }
 .gallery__bg-img img {
   width: 100%;
@@ -987,12 +989,70 @@ body {
   background: #fff;
 }
 .gallery__text-name {
+  margin-bottom: 40px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: clamp(28px, 3vw, 40px);
   line-height: 130%;
   color: #1a1a1a;
 }
+.gallery .swiper-btn {
+  position: relative;
+  max-width: 136px;
+  width: 100%;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.process__content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 100px 0;
+}
+.process__wrap-flex {
+  flex: 0 1 32%;
+}
+.process__flex-number {
+  max-width: 98px;
+  max-height: 77px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 51px;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  padding: clamp(10px, 2vw, 14px) clamp(24px, 2vw, 30px);
+  box-shadow: 4px 4px 0 1px #1e1e1e;
+  background: #fff;
+}
+.process__flex-number span {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 130%;
+  color: #1a1a1a;
+}
+.process__flex-body {
+  border: 2px solid #262626;
+  border-radius: 12px;
+  padding: clamp(30px, 2vw, 50px);
+  box-shadow: 4px 4px 0 1px #1e1e1e;
+  background: #fff;
+}
+.process__body-name {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 40px);
+  margin-bottom: 20px;
+  line-height: 130%;
+  color: #1a1a1a;
+}
+
 @media (max-width: 1440px) {
   .learn__wrap-flex {
     width: 30%;
@@ -1132,6 +1192,12 @@ body {
   }
   .gallery__button-btn {
     width: 47%;
+  }
+  .process__wrap-flex {
+    flex: 0 1 100%;
+  }
+  .process__flex-number {
+    margin: 0 auto 51px auto;
   }
 }
 @media (max-width: 825px) {

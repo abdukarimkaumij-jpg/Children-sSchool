@@ -103,7 +103,6 @@ function initSwiper() {
   }
 }
 
-
 // === FAQ ===
 function initQuestions() {
   const items = document.querySelectorAll('.question__wrap-flex');
@@ -121,6 +120,48 @@ function initQuestions() {
   });
 }
 
+document.querySelectorAll(".gallery__flex-bg").forEach((block) => {
+  const swiper = new Swiper(block.querySelector(".galleryMySwiper"), {
+    slidesPerView: 5,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: block.querySelector(".swiper-button-next"),
+      prevEl: block.querySelector(".swiper-button-prev"),
+    },
+    breakpoints: {
+      0: {slidesPerView: 1},
+      768: {slidesPerView: 1},
+      955: { slidesPerView: 2 },
+      1024: { slidesPerView: 3},
+      1440: { slidesPerView: 4}
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".gallery__button-btn");
+    const items = document.querySelectorAll(".gallery__sartyrofka-body");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const filter = button.dataset.filter;
+
+            // active кнопка
+            buttons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            items.forEach(item => {
+                const categories = item.dataset.category.split(" ");
+
+                if (filter === "all" || categories.includes(filter)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    });
+});
 
 // === Запуск ===
 document.addEventListener("DOMContentLoaded", async () => {
