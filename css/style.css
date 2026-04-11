@@ -1053,6 +1053,56 @@ body {
   color: #1a1a1a;
 }
 
+.possibilities__content-body {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 80px 0;
+}
+.possibilities__body-column {
+  width: 100%;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  padding: clamp(30px, 3vw, 60px);
+  box-shadow: 6px 6px 0 2px #1e1e1e;
+  background: #fff;
+}
+.possibilities__column-table {
+  width: 100%;
+}
+.possibilities__table-top, .possibilities__table-header {
+  margin-bottom: 30px;
+  background: #ffefe5;
+  border: 2px solid #262626;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.possibilities__header-name {
+  width: 20%;
+  border-left: 2px solid #262626;
+  padding: clamp(18px, 2vw, 20px) clamp(30px, 2vw, 34px);
+}
+.possibilities__header-name span {
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  font-size: clamp(15px, 2vw, 20px);
+  line-height: 150%;
+  color: #262626;
+}
+.possibilities__table-subbody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #262626;
+  border-radius: 10px;
+  background: #fffcfa;
+}
+.possibilities__subbody-wrap {
+  width: 20%;
+}
 @media (max-width: 1440px) {
   .learn__wrap-flex {
     width: 30%;
