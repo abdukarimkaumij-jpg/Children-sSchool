@@ -644,6 +644,31 @@ body {
 		&__info-right {
                   width: 47%;
 		}
+            &__right-social {
+                  margin-top: 50px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  gap: 25px;
+            }
+            &__social-link {
+                  flex: 46%;
+                  border: 2px solid $grey-15;
+                  border-radius: 12px;
+                  padding: 20px;
+                  background: $orange-99;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  span {
+                        font-family: $font-family;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 150%;
+                        color: $grey-15;
+                  }
+            }
 }
 .visions {
 		&__content-wrap {
@@ -1161,6 +1186,113 @@ body {
                   color: $grey-10;
 		}
 }
+// Contact Page
+.contact {
+		&__content-body {
+                  position: relative;
+                  border: 2px solid $grey-15;
+                  border-radius: 12px;
+                  padding: clamp(80px, 10vw, 120px) clamp(30px, 8vw, 100px) clamp(30px, 8vw, 100px);
+                  box-shadow: 8px 8px 0 1px #1e1e1e;
+                  background: $absolute-white;
+		}
+		&__body-social {
+                  position: absolute;
+                  top: -30px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  display: flex;
+                  align-items: center;
+                  gap: 20px;
+		}
+		&__social-link {
+                  width: 154px;
+                  height: 74px;
+                  img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                  }
+		}
+		&__body-form {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  gap: 50px 0;
+		}
+		&__form-row {
+                  width: 100%;
+                  flex: 0 1 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  gap: 50px;
+		}
+		&__row-group {
+                  width: 100%;
+                  display: flex;
+                  align-items: start;
+                  justify-content: space-between;
+                  flex-direction: column;
+		}
+		&__group-label {
+                  margin-bottom: 20px;
+                  font-family: $font-family;
+                  font-weight: 600;
+                  font-size: 22px;
+                  line-height: 150%;
+                  color: #4c4c4c;
+		}
+            .textarea {
+                  height: 218px;
+            }
+            &__select-option {
+                  font-family: $font-family;
+                  font-weight: 600;
+                  font-size: 22px;
+                  line-height: 150%;
+                  color: #4c4c4c;
+            }
+		&__group-input {
+                  width: 100%;
+                  border: 2px solid $grey-15;
+                  border-radius: 8px;
+                  padding: 30px;
+                  background: $orange-99;
+                  font-family: $font-family;
+                  font-weight: 500;
+                  font-size: 20px;
+                  line-height: 150%;
+                  color: $grey-35;
+                  &::placeholder {
+                        font-family: $font-family;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 150%;
+                        color: $grey-35;
+                  }
+		}
+		&__select-option {
+                  font-family: $font-family;
+                  font-weight: 500;
+                  font-size: 20px;
+                  line-height: 150%;
+                  color: $grey-35;
+		}
+		&__form-button {
+                  flex: 0 1 100%;
+                  border: 2px solid $grey-15;
+                  border-radius: 12px;
+                  padding: 30px 34px;
+                  font-family: $font-family;
+                  font-weight: 500;
+                  font-size: 24px;
+                  line-height: 150%;
+                  color: $grey-15;
+                  background: $orange-75;
+		}
+}
 @media (max-width: 1440px) {
       .learn {
             &__wrap-flex {
@@ -1374,6 +1506,12 @@ body {
       .celebrations {
             &__wrap-flex {
                   width: 100%;
+            }
+      }
+      // Contact Page
+      .contact {
+            &__form-row {
+                  flex-direction: column;
             }
       }
 }
